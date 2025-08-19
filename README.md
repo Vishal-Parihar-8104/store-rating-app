@@ -1,97 +1,72 @@
-📂 Backend (Express + PostgreSQL/MySQL)
-backend/
-│── src/
-│   ├── config/          # Configurations (DB, JWT, etc.)
-│   │   ├── db.js
-│   │   ├── passport.js
-│   │   └── config.js
-│   │
-│   ├── models/          # Database models (User, Store, Rating)
-│   │   ├── User.js
-│   │   ├── Store.js
-│   │   └── Rating.js
-│   │
-│   ├── controllers/     # Handle requests/responses
-│   │   ├── authController.js
-│   │   ├── userController.js
-│   │   ├── storeController.js
-│   │   └── ratingController.js
-│   │
-│   ├── routes/          # API Routes
-│   │   ├── authRoutes.js
-│   │   ├── userRoutes.js
-│   │   ├── storeRoutes.js
-│   │   └── ratingRoutes.js
-│   │
-│   ├── middlewares/     # Custom middlewares (auth, validation, role-check)
-│   │   ├── authMiddleware.js
-│   │   └── validateMiddleware.js
-│   │
-│   ├── utils/           # Helper functions
-│   │   ├── validators.js
-│   │   └── response.js
-│   │
-│   ├── app.js           # Express App Initialization
-│   └── server.js        # Server Start
-│
-├── package.json
-└── .env
+# ⭐ Store Rating App
 
-📂 Frontend (React + Tailwind CSS)
+A full-stack web application that allows users to **rate stores (1–5 stars)**, browse ratings, and manage access based on **user roles** (Admin, Store Owner, Customer).  
+This project is built as part of a **FullStack Intern Coding Challenge**.
+
+---
+
+## 📌 Features
+- 🔐 **Authentication System** (JWT-based login & signup)
+- 👥 **Role-based Access Control**
+  - **Admin** → Manage users & stores
+  - **Store Owners** → Manage their own store & view ratings
+  - **Customers** → Browse stores & submit ratings
+- ⭐ **Store Rating System** (1–5 stars)
+- 📊 **Dashboard for Store Owners/Admins**
+- 🔎 **Search & Filter Stores**
+- 🎨 **Responsive UI with TailwindCSS**
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- ⚛️ React.js (Vite)
+- 🎨 Tailwind CSS
+- 🌐 Axios (API calls)
+
+### Backend
+- 🚀 Express.js (Node.js)
+- 🛢️ PostgreSQL / MySQL
+- 🔐 JWT (Authentication)
+- 🧩 Sequelize / Prisma (ORM)
+
+---
+
+## 📂 Folder Structure
+
+### Frontend (`/frontend`)
 frontend/
 │── src/
-│   ├── assets/            # Static images/icons
-│   │   └── logo.svg
-│   │
-│   ├── components/        # Reusable UI Components
-│   │   ├── Navbar.jsx
-│   │   ├── Footer.jsx
-│   │   ├── StoreCard.jsx
-│   │   ├── RatingStars.jsx
-│   │   └── SearchBar.jsx
-│   │
-│   ├── pages/             # Page-level components (Screens)
-│   │   ├── Login.jsx
-│   │   ├── Signup.jsx
-│   │   ├── Dashboard.jsx       # Admin / Store Owner dashboard
-│   │   ├── StoreList.jsx       # Normal user store browsing
-│   │   └── Profile.jsx
-│   │
-│   ├── context/           # React Context (Auth, User, etc.)
-│   │   └── AuthContext.jsx
-│   │
-│   ├── hooks/             # Custom Hooks
-│   │   └── useAuth.js
-│   │
-│   ├── services/          # API Calls
-│   │   ├── authService.js
-│   │   ├── userService.js
-│   │   └── storeService.js
-│   │
-│   ├── utils/             # Helpers
-│   │   └── validators.js
-│   │
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css          # Tailwind entry
+│ ├── assets/ # Static images/icons
+│ ├── components/ # Reusable UI Components
+│ ├── pages/ # Page-level components (Screens)
+│ ├── context/ # React Context (Auth, User, etc.)
+│ ├── hooks/ # Custom Hooks
+│ ├── services/ # API Calls
+│ ├── utils/ # Helpers
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css # Tailwind entry
 │
 ├── tailwind.config.js
 ├── postcss.config.js
 ├── package.json
 └── vite.config.js
 
-📂 Database
-database/
-│── migrations/        # SQL migration scripts
-│   ├── create_users_table.sql
-│   ├── create_stores_table.sql
-│   └── create_ratings_table.sql
+backend/
+│── src/
+│ ├── config/ # DB & JWT config
+│ ├── controllers/ # Business logic
+│ ├── middleware/ # Auth & Role checks
+│ ├── models/ # Database models
+│ ├── routes/ # API routes
+│ ├── server.js # Entry point
+│ └── app.js
 │
-│── seeders/           # Demo seed data
-│   ├── users_seed.sql
-│   └── stores_seed.sql
-│
-└── schema.sql         # Full DB schema
+├── package.json
+└── .env
 
+🧑‍💻 Contributors
 
-✅
+Vishal Kumar Parihar – FullStack Developer
